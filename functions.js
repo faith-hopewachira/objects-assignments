@@ -28,7 +28,7 @@ function checkElement(array, index) {
    // Example
    const employees = [
     { id: 1, name: 'Alice', salary: 8000 },
-    { id: 2, name: 'Bob', salary: 60000 },
+    { id: 2, name: 'Bob', salary: 1000 },
     { id: 3, name: 'Charlie', salary: 40000 }
    ];
    const sortedEmployees = sortBySalary(employees);
@@ -38,3 +38,32 @@ function checkElement(array, index) {
     numbers.forEach((number) => {
        console.log(number * 2);
 })};
+
+// Write a function that takes in a an array of strings and use a continue statement when the 
+// item is at the second index:  let fruits= ['apple','plum','banana','strawberries','kiwi']
+// function arrStrings(fruits) {
+//    for (let fruit = 0; fruit < fruits.length; fruit++) {
+//       if(fruit[fruit]===2){
+//          continue
+//       }
+//          console.log(fruit);
+//    }
+   
+// }
+
+// let fruits= ['apple','plum','banana','strawberries','kiwi']
+// arrStrings(fruits);
+
+
+function arrStrings(fruits) {
+   let fruit = 0
+   while (fruit===2) {
+      break
+      
+   }
+   console.log(fruit);
+   
+}
+
+let fruits= ['apple','plum','banana','strawberries','kiwi']
+arrStrings(fruits);

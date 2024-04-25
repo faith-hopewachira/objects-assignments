@@ -38,8 +38,6 @@ function myProducts(products) {
   console.log(prod);
 }
 
-
-
 const products = [
       { name: 'Laptop', price: 1200, category: 'Electronics' },
       { name: 'Shirt', price: 25, category: 'Clothing' },
@@ -48,7 +46,6 @@ const products = [
 ];
 
 myProducts(products);
-
 
 // Given an array of objects, where each object represents a student with a name and an array of scores,
 // write a function that returns a new array containing the names of all students whose average score is
@@ -60,32 +57,16 @@ myProducts(products);
 // ];
 
 function allStudents(students){
-     students.map(student => {
-        console.log(student);
-
-        const arrScores = student.scores
-        console.log(arrScores);
-
-        const sum = arrScores.reduce((acc, curr)=> acc + curr);
-        console.log(sum);
-
-        const average =sum / arrScores.length;
-        console.log(average);
-
-
-
-       if(average >= 85){
-        console.log(Array(student.name,average));
-
-       }
-       else{
-        console.log("smaller than 85");
-       }
-
-        
-     })
+  const studentAverages = students.map(student => {
+    const sum = student.scores.reduce((acc, score) => acc + score);
+    return { name: student.name, average: sum / student.scores.length };
+  });
+  // Use filter to only select students with an average above 90
+  const aboveAverage = studentAverages.filter(student => student.average >= 85);
+  console.log(aboveAverage);
 
 }
+     
 
 const students = [
       { name: 'John', scores: [90, 80, 85] },
